@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :check_login
-  before_action :check_current_user
+  # before_action :check_login
+  before_action :authenticate_user!
+  before_action :current_user
   before_action :find_room, only: %i(new create update)
   before_action :valid_date_for_booking,
                 :get_booked_room_for_booking,

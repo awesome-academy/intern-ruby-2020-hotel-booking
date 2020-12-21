@@ -268,3 +268,14 @@ vi:
       date_end: "Ngày trả phòng"
       unit_price: "Đơn giá"
       total_pay: "Tổng tiền"
+  devise:
+    registrations:
+      new:
+        send: "Đăng ký"
+        sign_up: "Đăng ký"
+        signed_up: "Đăng ký thành công"
+    sessions:
+      user:
+        log_in: "Đăng nhập"
+        signed_in: "Đăng nhập thành công"
+        signed_out: "Đã đăng xuất"

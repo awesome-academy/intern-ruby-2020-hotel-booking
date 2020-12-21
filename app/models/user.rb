@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   USER_PERMIT = [:name,
                  :email,
                  :password,
@@ -22,5 +26,4 @@ class User < ApplicationRecord
                        length: {minimum: Settings.model.validate.min_password},
                        allow_nil: true
   enum role: {user: 0, admin: 1}
-  has_secure_password
 end
